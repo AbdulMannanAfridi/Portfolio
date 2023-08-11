@@ -969,6 +969,11 @@ height:400px;
     <!-- Wrapper Ends -->
 
     <!-- Template JS Files -->
+    <script>
+       hexo.extend.helper.register('page_url', function(path, options) {
+    return this.url_for(path, options).replace(/index\.html$/, '');
+});
+    </script>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/jquery.animatedheadline.js"></script>
     <script src="js/boxlayout.js"></script>
